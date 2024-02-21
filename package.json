@@ -1,0 +1,63 @@
+{
+  "name": "vue_test",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve ./example/main.js --open",
+    "build": "vue-cli-service build --name vue_test --entry ./src/index.js --target lib",
+    "lint": "vue-cli-service lint",
+    "doc:build": "npx vuedoc.md --section API --output ./README.md ./src/components/VueTest.vue",
+    "prepublishOnly": "npm run lint && npm run build && npm run styleguide:build && npm run doc:build",
+    "styleguide": "vue-styleguidist server",
+    "styleguide:build": "vue-styleguidist build"
+  },
+  "main": "dist/vue_test.umd.js",
+  "module": "dist/vue_test.common.min.js",
+  "files": [
+    "dist/*.css",
+    "dist/*.map",
+    "dist/*.js",
+    "src/*"
+  ],
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vuedoc/md": "^1.5.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-cli-plugin-component": "~1.12.2",
+    "vue-styleguidist": "^1.7.13"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "keywords": [
+    "vue",
+    "component"
+  ],
+  "license": "MIT"
+}
