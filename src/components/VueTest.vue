@@ -1,16 +1,13 @@
 <template>
-    <div id="app" class="font-fantasy">
-    <div class="today_wrap">
+    <div id="app" class="font-fantasy text-end border-b border-b-slate-800 md:grid flex md:justify-end justify-center gap-4 p-5">
       <div>
-        <p class="text-6xl tracking-widest">{{ date }}</p>
+        <p class="md:text-6xl text-lg tracking-widest">{{ date }}</p>
       </div>
       <div>
-        <p class="text-6xl tracking-widest">{{ dayOfWeek }}</p>
+        <p class="md:text-6xl text-lg tracking-widest">{{ dayOfWeek }}</p>
       </div>
-    </div>
-
-    <div>
-      <p class="text-6xl tracking-widest">{{ clock }}</p>
+      <div>
+      <p class="md:text-6xl text-lg tracking-widest">{{ clock }}</p>
     </div>
   </div>
 </template>
