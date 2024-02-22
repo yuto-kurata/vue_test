@@ -1,22 +1,6 @@
 
 # vue_test
-[![GitHub open issues](https://img.shields.io/github/issues/kuratayuto/vue_test.svg?maxAge=2592000)](https://github.com/kuratayuto/vue_test/issues)
-[![Npm version](https://img.shields.io/npm/v/vue_test.svg?maxAge=2592000)](https://www.npmjs.com/package/vue_test)
-[![MIT License](https://img.shields.io/github/license/kuratayuto/vue_test.svg)](https://github.com/kuratayuto/vue_test/blob/master/LICENSE)
 
-## Usage
-```HTML
-<VueTest :text="hello"></VueTest>
-```
-```javascript
-import { VueTest } from 'vue_test'
-
-export default {
-  components: {
-    VueTest
-  }
-}
-```
 ## API
 
 ## Installation
@@ -60,4 +44,9 @@ npm run styleguide
 ### Generate a static HTML style guide
 ```
 npm run styleguide:build
+```
+
+### Tailwind CSSビルド
+```
+npx tailwindcss -i ./src/assets/css/input.css -o ./public/assets/css/output.css --watch
 ```

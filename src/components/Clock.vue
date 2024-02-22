@@ -14,11 +14,12 @@
 
 <script>
 export default {
+  name: "Clock",
   data() {
     return {
-      clock: '00:00:00',
-      date: '',
-      dayOfWeek: '',
+      clock: "00:00:00",
+      date: "",
+      dayOfWeek: "",
     };
   },
   created() {
@@ -27,9 +28,9 @@ export default {
   methods: {
     tick() {
       const now = new Date();
-      this.clock = this.formatTime(now.getHours()) + ':' + this.formatTime(now.getMinutes()) + ':' + this.formatTime(now.getSeconds());
+      this.clock = this.formatTime(now.getHours()) + ":" + this.formatTime(now.getMinutes()) + ":" + this.formatTime(now.getSeconds());
       this.date = `${now.getFullYear()}-${this.formatTime(now.getMonth() + 1)}-${this.formatTime(now.getDate())}`;
-      this.dayOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'][now.getDay()];
+      this.dayOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"][now.getDay()];
       setTimeout(this.tick, 1000);
     },
     formatTime(value) {
