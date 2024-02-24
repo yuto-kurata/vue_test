@@ -1,5 +1,5 @@
 <template>
-  <div id="clock" class="flex justify-center gap-4 border-b border-b-slate-800 p-5 text-end font-fantasy md:grid md:justify-end">
+  <div id="clock" class="flex gap-4 border-y border-y-slate-800 p-5 font-fantasy md:grid md:justify-end md:text-end">
     <div>
       <p class="__stroke text-lg tracking-widest md:text-6xl">{{ date }}</p>
     </div>
@@ -39,16 +39,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.__stroke {
-  -webkit-text-stroke: inherit;
-  -webkit-text-fill-color: inherit;
-}
-@media (min-width: 768px) {
-  .__stroke {
-    -webkit-text-stroke: 2px black;
-    -webkit-text-fill-color: transparent;
-  }
-}
-</style>
